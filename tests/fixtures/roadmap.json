@@ -1,0 +1,8 @@
+{
+  "fictif": true,
+  "milestones": [
+    {"id": "j1", "title": "FICTIF - Jalon 1", "action": "FICTIF - Action concrète 1"},
+    {"id": "j2", "title": "FICTIF - Jalon 2", "action": "FICTIF - Action concrète 2"},
+    {"id": "j3", "title": "FICTIF - Jalon 3", "action": "FICTIF - Action concrète 3"}
+  ]
+}
