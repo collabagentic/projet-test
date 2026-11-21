@@ -1,0 +1,7 @@
+{
+  "jalons": [
+    {"id": "jalon_1", "titre": "A_DEFINIR_JALON_1", "action": "A_DEFINIR_ACTION_1"},
+    {"id": "jalon_2", "titre": "A_DEFINIR_JALON_2", "action": "A_DEFINIR_ACTION_2"},
+    {"id": "jalon_3", "titre": "A_DEFINIR_JALON_3", "action": "A_DEFINIR_ACTION_3"}
+  ]
+}

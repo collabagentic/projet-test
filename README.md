@@ -22,3 +22,29 @@ pytest
 - Aucun secret dans le dépôt (voir `.gitignore`). Les clés passent par des variables d'environnement.
 - Le développement se fait sur une branche dédiée, jamais directement sur `main`.
 - Toute fusion dans `main` passe par une pull request approuvée par un humain.
+
+## Cockpit de l'élève — mission M-004 (P1)
+
+Moteur du parcours P1 (domaine sensible mineurs : on construit le *contenant*, jamais le contenu) :
+
+- cockpit/questionnaire.py : moteur de questionnaire de profil (maximum 15 questions).
+- cockpit/filtrage.py : filtre de termes interdits (liste chargée depuis config).
+- cockpit/roadmap.py : moteur de roadmap (au moins 3 jalons).
+- cockpit/site.py : génération d'un site HTML **standalone** (pas de base centrale, généré en moins de 5 minutes).
+- cockpit/pipeline.py : parcours complet questionnaire → profil → site + roadmap.
+
+**Règle de contenu** : aucun contenu de domaine (question, libellé, seuil, recommandation, conseil) n'est écrit en dur. Les textes sont des emplacements A_DEFINIR_<SUJET> chargés depuis config/*.json. La génération est **refusée** tant qu'un emplacement reste ouvert.
+
+Configuration et gabarit :
+
+- config/questionnaire.json
+- config/termes_interdits.json
+- config/roadmap.json
+- config/site.json
+- templates/site.html
+
+Vérifications :
+
+    pytest
+    ruff check .
+    bandit -q -r . -x ./tests,./.venv
